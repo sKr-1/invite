@@ -16,5 +16,18 @@ window.onload = function () {
 
   showSlide(currentIndex);
   setInterval(nextSlide, 3000);
-};
 
+  // 🎵 Background Music Toggle
+  const music = document.getElementById("bg-music");
+  const toggleBtn = document.getElementById("music-toggle");
+
+  toggleBtn.addEventListener("click", () => {
+     if (music.paused) {
+        music.play();
+        toggleBtn.textContent = "🔊";
+     } else {
+        music.pause();
+        toggleBtn.textContent = "🔇";
+     }
+  });
+};

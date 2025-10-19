@@ -4,6 +4,7 @@ body {
    font-family: "Poppins", sans-serif;
    margin: 0;
    padding: 0;
+   padding-bottom: env(safe-area-inset-bottom); /* for iPhone notch support */
    background: linear-gradient(to bottom right, #ffe4ec, #f0faff);
    text-align: center;
    overflow-x: hidden;
@@ -18,7 +19,6 @@ body {
    opacity: 0.7;
 }
 
-/* Colored butterflies */
 .b1 { color: #FF69B4; top: 10%; left: -10%; animation: fly1 14s linear infinite; }
 .b2 { color: #7FFFD4; top: 35%; left: -15%; animation: fly2 18s ease-in-out infinite; }
 .b3 { color: #9370DB; top: 60%; left: -20%; animation: fly3 16s ease-in-out infinite; }
@@ -132,53 +132,66 @@ h2 {
    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
+/* 📍 Location Button */
 #location-btn {
-  position: fixed;
-  bottom: 80px; /* places it above the music button */
-  right: 20px;
-  background: #34a853; /* Google Maps green */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 998;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
+   position: fixed;
+   bottom: 80px;
+   right: 20px;
+   background: #34a853;
+   color: white;
+   border: none;
+   padding: 10px 15px;
+   font-size: 20px;
+   border-radius: 50%;
+   cursor: pointer;
+   z-index: 998;
+   text-decoration: none;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+   transition: background 0.3s ease;
 }
 
 #location-btn:hover {
-  background: #0f9d58;
+   background: #0f9d58;
 }
-
 
 /* 🔊 Music Toggle Button */
 #music-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #ff7e5f;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background: #ff7e5f;
+   color: white;
+   border: none;
+   padding: 10px 15px;
+   font-size: 20px;
+   border-radius: 50%;
+   cursor: pointer;
+   z-index: 999;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+   transition: background 0.3s ease;
 }
 
 #music-toggle:hover {
-  background: #e65c46;
+   background: #e65c46;
 }
 
-
-/* Responsive */
+/* 📱 Responsive Tweaks */
 @media (max-width: 768px) {
    .title { font-size: 32px; }
    h2 { font-size: 20px; }
    #details p { font-size: 14px; }
+
+   #location-btn {
+      bottom: 90px;
+      right: 15px;
+      font-size: 18px;
+      padding: 10px;
+   }
+
+   #music-toggle {
+      bottom: 20px;
+      right: 15px;
+      font-size: 18px;
+      padding: 10px;
+   }
 }

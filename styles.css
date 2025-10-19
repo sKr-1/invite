@@ -132,6 +132,28 @@ h2 {
    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
+#location-btn {
+  position: fixed;
+  bottom: 80px; /* places it above the music button */
+  right: 20px;
+  background: #34a853; /* Google Maps green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 998;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+#location-btn:hover {
+  background: #0f9d58;
+}
+
+
 /* 🔊 Music Toggle Button */
 #music-toggle {
   position: fixed;
